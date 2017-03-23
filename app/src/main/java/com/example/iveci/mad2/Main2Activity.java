@@ -12,7 +12,7 @@ public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTitle("Linear Equation");
+        setTitle("각종 계산기");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         tabhost = (TabHost) findViewById(R.id.thost1);
