@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mnyell"
+        android:checked="false"
+        android:title="yellow" />
+    <item
+        android:id="@+id/mnblue"
+        android:checked="false"
+        android:title="blue" />
+</menu>
