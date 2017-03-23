@@ -32,6 +32,7 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#fce302"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -46,6 +47,7 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#01169f"
                     android:orientation="vertical">
 
                     <LinearLayout
