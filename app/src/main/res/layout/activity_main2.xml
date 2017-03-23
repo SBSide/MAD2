@@ -16,7 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
             <FrameLayout
@@ -31,10 +34,6 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <DatePicker
-                        android:id="@+id/datePicker"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -43,10 +42,6 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <TimePicker
-                        android:id="@+id/timePicker"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -57,18 +52,8 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/tab4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
             </FrameLayout>
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+
         </LinearLayout>
     </TabHost>
 </LinearLayout>
