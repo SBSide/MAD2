@@ -39,4 +39,8 @@ public class Main2Activity extends AppCompatActivity {
 //            }
 //        }).setIndicator("결과"));
     }
+
+    public void onyourclick(View v){
+
+    }
 }

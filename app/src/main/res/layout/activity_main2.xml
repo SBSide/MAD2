@@ -63,6 +63,8 @@
                             android:background="#FFDDFF"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
                             android:textSize="20dp"
                             android:ems="10"
                             android:inputType="number" />
@@ -81,21 +83,30 @@
                             android:background="#FFDDFF"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
                             android:textSize="20dp"
                             android:ems="10"
                             android:inputType="number" />
 
                         <Button
-                            android:id="@+id/button"
+                            android:id="@+id/bcbmi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Button" />
+                            android:background="@color/colorAccent"
+                            android:layout_marginTop="10dp"
+                            android:padding="15dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20dp"
+                            android:text="BMI 계산 결과" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/tresult"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:layout_marginTop="10dp"
+                            android:textSize="15dp"
+                            android:text="결과가 없습니다." />
                     </LinearLayout>
                 </LinearLayout>
 
