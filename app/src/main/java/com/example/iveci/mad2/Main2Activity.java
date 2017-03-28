@@ -40,8 +40,6 @@ public class Main2Activity extends AppCompatActivity {
                 .setIndicator("BMI계산기"));
         tabhost.addTab(tabhost.newTabSpec("면적").setContent(R.id.tab2)
                 .setIndicator("면적 계산기"));
-        tabhost.addTab(tabhost.newTabSpec("달력").setContent(R.id.tab3)
-                .setIndicator("정보입력"));
     }
 
     public void onyourclick(View v){
