@@ -47,7 +47,7 @@ public class Main2Activity extends AppCompatActivity {
     public void onyourclick(View v){
         switch (v.getId()) {
             case bcbmi: {
-                String tall = tal.getText().toString().equals("") ? "1" : tal.getText().toString();
+                String tall = tal.getText().toString().equals("") ? "1" : tal.getText().toString();//div0 방지
                 String weight = wei.getText().toString().equals("") ? "0" : wei.getText().toString();
                 double result = Double.parseDouble(weight) /
                         ((Double.parseDouble(tall) / 100) * (Double.parseDouble(tall) / 100));
