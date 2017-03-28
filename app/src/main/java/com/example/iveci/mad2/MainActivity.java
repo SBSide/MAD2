@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener{
+public class MainActivity extends AppCompatActivity{
     TextView t1,t2;
     LinearLayout limain,li1,li2;
     ImageView i1,i2;
@@ -24,36 +24,13 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         setTitle("메뉴를 눌러보세요");
         setContentView(R.layout.activity_main);
         init();
-//        registerForContextMenu(text);
-
-
     }
 
 
-//    @Override
-//    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-//        if(v == text){
-//            getMenuInflater().inflate(R.menu.menu2, menu);
-//
-//        }
-//        super.onCreateContextMenu(menu, v, menuInfo);
-//    }
-//
-//    @Override
-//    public boolean onContextItemSelected(MenuItem item) {//Contextmenu 선택시
-//        switch (item.getItemId()) {
-//            case R.id.mnyell:
-//                text.setBackgroundColor(Color.YELLOW);
-//                break;
-//        }
-//        return super.onContextItemSelected(item);
-//    }
 
         @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu2, menu);
-////        menu.add(0,100,0,"배경색");
-////        SubMenu
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -92,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                     break;
                 }
                 case R.id.mnzoom:{
-
                     if (!item.isChecked()) {
                         i1.setScaleX(i2.getScaleX()*2);
                         i1.setScaleY(i2.getScaleY()*2);
@@ -135,10 +111,5 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         li2 = (LinearLayout) findViewById(R.id.linspa);
         i1 = (ImageView) findViewById(R.id.chicken);
         i2 = (ImageView) findViewById(R.id.spagetti);
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
     }
 }
