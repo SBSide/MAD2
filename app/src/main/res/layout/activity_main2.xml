@@ -29,6 +29,75 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#3C341F"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="평이나 면적을 입력하세요." />
+
+                        <EditText
+                            android:id="@+id/emil"
+                            android:background="#d5f9dd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="20dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal" />
+
+                        <TextView
+                            android:id="@+id/tconvr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="20dp"
+                            android:text="계산결과가 없습니다." />
+
+                        <Button
+                            android:id="@+id/bconvp_ms"
+                            android:onClick="onyourclick"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#7f9f02"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20dp"
+                            android:text="평을 제곱미터로 변환" />
+
+                        <Button
+                            android:id="@+id/bconvms_p"
+                            android:onClick="onyourclick"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#59b98e"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20dp"
+                            android:text="제곱미터를 평으로 변환" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -59,15 +128,15 @@
                             android:text="키(cm)" />
 
                         <EditText
-                            android:id="@+id/editText"
-                            android:background="#FFDDFF"
+                            android:id="@+id/etall"
+                            android:background="#7fddfa"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:textSize="20dp"
                             android:ems="10"
-                            android:inputType="number" />
+                            android:inputType="numberDecimal" />
 
                         <TextView
                             android:id="@+id/textView3"
@@ -79,21 +148,22 @@
                             android:text="체중(kg)" />
 
                         <EditText
-                            android:id="@+id/editText2"
-                            android:background="#FFDDFF"
+                            android:id="@+id/eweight"
+                            android:background="#7fddfa"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:textSize="20dp"
                             android:ems="10"
-                            android:inputType="number" />
+                            android:inputType="numberDecimal" />
 
                         <Button
                             android:id="@+id/bcbmi"
+                            android:onClick="onyourclick"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorAccent"
+                            android:background="#09a1f4"
                             android:layout_marginTop="10dp"
                             android:padding="15dp"
                             android:textColor="#FFFFFF"
@@ -107,54 +177,6 @@
                             android:layout_marginTop="10dp"
                             android:textSize="15dp"
                             android:text="결과가 없습니다." />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#01169f"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:padding="20dp"
-                        android:background="#FFFFFF"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <EditText
-                            android:id="@+id/editText3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <TextView
-                            android:id="@+id/textView5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <Button
-                            android:id="@+id/button2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Button" />
-
-                        <Button
-                            android:id="@+id/button3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Button" />
                     </LinearLayout>
                 </LinearLayout>
 

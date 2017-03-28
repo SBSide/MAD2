@@ -1,20 +1,39 @@
 package com.example.iveci.mad2;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import static com.example.iveci.mad2.R.id.bcbmi;
+import static com.example.iveci.mad2.R.id.bconvms_p;
+import static com.example.iveci.mad2.R.id.bconvp_ms;
+import static com.example.iveci.mad2.R.id.eweight;
 
 public class Main2Activity extends AppCompatActivity {
     TabHost tabhost;
+    EditText tal,wei,mil;
+    TextView res,convres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTitle("각종 계산기");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        init();
+    }
+
+    private void init() {
+        tal = (EditText) findViewById(R.id.etall);
+        wei = (EditText) findViewById(R.id.eweight);
+        mil = (EditText) findViewById(R.id.emil);
+        res = (TextView) findViewById(R.id.tresult);
+        convres = (TextView) findViewById(R.id.tconvr);
         tabhost = (TabHost) findViewById(R.id.thost1);
         tabhost.setup();
         tabhost.addTab(tabhost.newTabSpec("BMI").setContent(R.id.tab1)
@@ -23,24 +42,46 @@ public class Main2Activity extends AppCompatActivity {
                 .setIndicator("면적 계산기"));
         tabhost.addTab(tabhost.newTabSpec("달력").setContent(R.id.tab3)
                 .setIndicator("정보입력"));
-//        tabhost.addTab(tabhost.newTabSpec("달력").setContent(new TabHost.TabContentFactory() {
-//            @Override
-//            public View createTabContent(String tag) {
-//                View view = View.inflate(Main2Activity.this,R.layout.layout2,null);
-//
-//                Button btn = (Button)view.findViewById(R.id.bgo);
-//                btn.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Toast.makeText(getApplicationContext(),"GO",Toast.LENGTH_SHORT).show();
-//                    }
-//                });
-//                return view;
-//            }
-//        }).setIndicator("결과"));
     }
 
     public void onyourclick(View v){
+        switch (v.getId()) {
+            case bcbmi: {
+                String tall = tal.getText().toString().equals("") ? "1" : tal.getText().toString();
+                String weight = wei.getText().toString().equals("") ? "0" : wei.getText().toString();
+                double result = Double.parseDouble(weight) /
+                        ((Double.parseDouble(tall) / 100) * (Double.parseDouble(tall) / 100));
+                if (result < 18.5) {
+                    res.setText("체중부족입니다!");
+                    res.setTextColor(Color.BLACK);
+                }
+                else if (18.5 <= result && result <= 22.9) {
+                    res.setText("정상입니다.");
+                    res.setTextColor(Color.BLUE);
+                }
+                else if (23.0 <= result && result <= 24.9) {
+                    res.setText("과체중입니다.");
+                    res.setTextColor(Color.RED);
+                }
+                else {
+                    res.setText("비만입니다!");
+                    res.setTextColor(Color.RED);
+                }
+                break;
+            }
+            case bconvp_ms: {
+                String area = mil.getText().toString().equals("") ? "0" : mil.getText().toString();
+                double res = Double.parseDouble(area) * 3.305785;
+                convres.setText(res + " 제곱미터");
+                break;
+            }
 
+            case bconvms_p: {
+                String area = mil.getText().toString().equals("") ? "0" : mil.getText().toString();
+                double res = Double.parseDouble(area) * 0.3025;
+                convres.setText(res + " 평");
+                break;
+            }
+        }
     }
 }
