@@ -124,14 +124,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                     break;
                 }
             }
-//        if(item.getItemId() == R.id.mnyell){
-//        }
-//        else if(item.getItemId() == R.id.mnblue){
-//            text.setTextSize(20);
-//        }
-//        else if(item.getItemId() == R.id.mnsize){
-//            text.setTextSize(10);
-//        }
         return super.onOptionsItemSelected(item);
     }
 

@@ -45,11 +45,15 @@ public class Main2Activity extends AppCompatActivity {
     public void onyourclick(View v){
         switch (v.getId()) {
             case bcbmi: {
-                String tall = tal.getText().toString().equals("") ? "1" : tal.getText().toString();//div0 방지
-                String weight = wei.getText().toString().equals("") ? "0" : wei.getText().toString();
+                if (tal.getText().toString().equals("") || wei.getText().toString().equals("")){
+                    res.setText("결과가 없습니다.");
+                    break;
+                }
+                String tall = tal.getText().toString().equals("0") ? "1" : tal.getText().toString();//div0 방지
+                String weight = wei.getText().toString();
                 double result = Double.parseDouble(weight) /
                         ((Double.parseDouble(tall) / 100) * (Double.parseDouble(tall) / 100));
-                if (result < 18.5) {
+                if (0 <= result && result < 18.5) {
                     res.setText("체중부족입니다!");
                     res.setTextColor(Color.BLACK);
                 }
@@ -73,7 +77,6 @@ public class Main2Activity extends AppCompatActivity {
                 convres.setText(res + " 제곱미터");
                 break;
             }
-
             case bconvms_p: {
                 String area = mil.getText().toString().equals("") ? "0" : mil.getText().toString();
                 double res = Double.parseDouble(area) * 0.3025;
